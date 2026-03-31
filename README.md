@@ -1,5 +1,7 @@
 # Harmonica Reference
 
+**[→ Open the live app](https://dimfield-git.github.io/harpline/)**
+
 Interactive reference tool for 10-hole Richter diatonic harmonicas. A single self-contained HTML file — no build step, no dependencies, no server.
 
 Covers positions 1–3 with note maps, scale degrees, triads, position lookups, and scale patterns for five harp keys: **Low F**, **C**, **D**, **G**, and **A**.
