@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="energikalkyl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmonica Reference — 10-Hole Richter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Literata:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ─── Energikalkyl (default) ─────────────────────────────────────────────── */
+[data-theme="energikalkyl"]{--bg:#EDF2E8;--bg-card:#FFFFFF;--primary:#325A3A;--primary-light:#466E4E;--accent:#EE9410;--accent-light:#FFBC42;--highlight:#E8F0E0;--highlight-border:#709F54;--surface-soft:#F6FAF1;--surface-strong:#EEF5E4;--text:#2A4A30;--text-muted:#6B7A65;--border:#D0C8B8;--input-bg:#FFFFFF;--table-header-bg:var(--primary);--table-header-text:#FFFFFF;--table-stripe:#F0F3EC;--shadow:0 1px 3px rgba(42,74,48,.08),0 1px 2px rgba(42,74,48,.06);--shadow-lg:0 4px 12px rgba(42,74,48,.1),0 2px 4px rgba(42,74,48,.06);--radius:8px;--radius-lg:12px;--error:#C03020;--blow-color:#325A3A;--draw-color:#EE9410;--bend-color:#6B7A65;--strip-blow-1:#C8DCC8;--strip-blow-1-text:#325A3A;--strip-blow-2:#325A3A;--strip-blow-2-text:#FFFFFF;--strip-blow-3:#8BAF8B;--strip-blow-3-text:#1A2E1A;--strip-draw-1:#FAD9A0;--strip-draw-1-text:#7A5500;--strip-draw-2:#EE9410;--strip-draw-2-text:#FFFFFF;--strip-draw-3:#D4B06A;--strip-draw-3-text:#4A3000;--strip-hole-bg:#FFFFFF;--strip-hole-border:var(--border)}
+/* ─── Blueprint ───────────────────────────────────────────────────────────── */
+[data-theme="blueprint"]{--bg:#FAFBFC;--bg-card:#FFF;--primary:#37474F;--primary-light:#546E7A;--accent:#0097A7;--accent-light:#26C6DA;--highlight:#E0F4F6;--highlight-border:#4DB6C4;--surface-soft:#F4F6F8;--surface-strong:#EAEEF1;--text:#263238;--text-muted:#607D8B;--border:#CFD8DC;--input-bg:#FFF;--table-header-bg:var(--primary);--table-header-text:#FFF;--table-stripe:#EEF2F4;--shadow:0 1px 3px rgba(55,71,79,.08),0 1px 2px rgba(55,71,79,.06);--shadow-lg:0 4px 12px rgba(55,71,79,.1),0 2px 4px rgba(55,71,79,.06);--radius:8px;--radius-lg:12px;--error:#C03020;--blow-color:#0097A7;--draw-color:#37474F;--bend-color:#607D8B;--strip-blow-1:#B2E5EB;--strip-blow-1-text:#005F6B;--strip-blow-2:#0097A7;--strip-blow-2-text:#FFFFFF;--strip-blow-3:#6ABFC9;--strip-blow-3-text:#003840;--strip-draw-1:#B0BEC5;--strip-draw-1-text:#263238;--strip-draw-2:#37474F;--strip-draw-2-text:#FFFFFF;--strip-draw-3:#78909C;--strip-draw-3-text:#FFFFFF;--strip-hole-bg:#FFFFFF;--strip-hole-border:var(--border)}
+/* ─── Midnatt ─────────────────────────────────────────────────────────────── */
+[data-theme="midnatt"]{--bg:#1A1D23;--bg-card:#22262F;--primary:#7EB8DA;--primary-light:#9ECCE8;--accent:#F0C754;--accent-light:#F6D980;--highlight:#1E2C3A;--highlight-border:#4A80A8;--surface-soft:#1E2229;--surface-strong:#252A34;--text:#D8E6F0;--text-muted:#7A96AA;--border:#2E3540;--input-bg:#1E2229;--table-header-bg:#2A3545;--table-header-text:#D8E6F0;--table-stripe:#1F252D;--shadow:0 1px 3px rgba(0,0,0,.25),0 1px 2px rgba(0,0,0,.2);--shadow-lg:0 4px 12px rgba(0,0,0,.35),0 2px 4px rgba(0,0,0,.25);--radius:8px;--radius-lg:12px;--error:#FF6B6B;--blow-color:#7EB8DA;--draw-color:#F0C754;--bend-color:#7A96AA;--strip-blow-1:#2A3A4A;--strip-blow-1-text:#9ECCE8;--strip-blow-2:#3A6080;--strip-blow-2-text:#D8E6F0;--strip-blow-3:#283040;--strip-blow-3-text:#6A9AB8;--strip-draw-1:#3A3520;--strip-draw-1-text:#F0C754;--strip-draw-2:#7A6020;--strip-draw-2-text:#F6D980;--strip-draw-3:#2E2A18;--strip-draw-3-text:#C8A840;--strip-hole-bg:#252A34;--strip-hole-border:var(--border)}
+/* ─── Grafit ──────────────────────────────────────────────────────────────── */
+[data-theme="grafit"]{--bg:#1E1E22;--bg-card:#26262C;--primary:#A0D4A0;--primary-light:#B8E2B8;--accent:#E8A445;--accent-light:#F0BF70;--highlight:#202A20;--highlight-border:#5A8A5A;--surface-soft:#222228;--surface-strong:#282830;--text:#D4E8D4;--text-muted:#7A967A;--border:#303038;--input-bg:#222228;--table-header-bg:#2A3A2A;--table-header-text:#D4E8D4;--table-stripe:#232328;--shadow:0 1px 3px rgba(0,0,0,.28),0 1px 2px rgba(0,0,0,.22);--shadow-lg:0 4px 12px rgba(0,0,0,.38),0 2px 4px rgba(0,0,0,.28);--radius:8px;--radius-lg:12px;--error:#FF8080;--blow-color:#A0D4A0;--draw-color:#E8A445;--bend-color:#7A967A;--strip-blow-1:#253025;--strip-blow-1-text:#A0D4A0;--strip-blow-2:#2A4A2A;--strip-blow-2-text:#D4E8D4;--strip-blow-3:#202820;--strip-blow-3-text:#6AAA6A;--strip-draw-1:#302818;--strip-draw-1-text:#E8A445;--strip-draw-2:#6A5020;--strip-draw-2-text:#F0BF70;--strip-draw-3:#282010;--strip-draw-3-text:#C08830;--strip-hole-bg:#282830;--strip-hole-border:var(--border)}
+/* ─── Konstruktivist ─────────────────────────────────────────────────────── */
+[data-theme="konstruktivist"]{--bg:#0D0D0D;--bg-card:#141414;--primary:#B71C1C;--primary-light:#CC3333;--accent:#F0DFC0;--accent-light:#F5ECD0;--highlight:#1A1614;--highlight-border:#CC3333;--surface-soft:#141414;--surface-strong:#1A1A1A;--text:#F0DFC0;--text-muted:#8A7E6B;--border:#2A2520;--input-bg:#141414;--table-header-bg:#B71C1C;--table-header-text:#F0DFC0;--table-stripe:#141414;--shadow:0 1px 3px rgba(0,0,0,.4),0 1px 2px rgba(0,0,0,.3);--shadow-lg:0 4px 12px rgba(0,0,0,.55),0 2px 4px rgba(0,0,0,.4);--radius:8px;--radius-lg:12px;--error:#E53935;--blow-color:#CC3333;--draw-color:#F0DFC0;--bend-color:#8A7E6B;--strip-blow-1:#2A1010;--strip-blow-1-text:#CC6666;--strip-blow-2:#8B1A1A;--strip-blow-2-text:#F0DFC0;--strip-blow-3:#4A1515;--strip-blow-3-text:#CC8888;--strip-draw-1:#1A1810;--strip-draw-1-text:#D0C0A0;--strip-draw-2:#3A3020;--strip-draw-2-text:#F0DFC0;--strip-draw-3:#1E1A12;--strip-draw-3-text:#A09070;--strip-hole-bg:#1A1A1A;--strip-hole-border:var(--border)}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:15px;scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;transition:background .3s,color .3s}
+.app-shell{max-width:1200px;margin:0 auto;padding:1.5rem 1.5rem 4rem}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:2px solid var(--border)}
+header h1{font-family:'Literata',serif;font-size:1.8rem;font-weight:700;color:var(--text);letter-spacing:-.02em}
+header h1 span{color:var(--accent);font-weight:400;font-style:italic}
+.controls{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+.chip{font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:600;padding:.35rem .75rem;border-radius:var(--radius);border:1.5px solid var(--border);background:var(--bg-card);color:var(--text-muted);cursor:pointer;transition:all .15s;user-select:none}
+.chip:hover{border-color:var(--accent);color:var(--text)}
+.chip.active{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.chip-group{display:flex;gap:.35rem;flex-wrap:wrap}
+.chip-group-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-muted);margin-bottom:.25rem}
+.chip-section{display:flex;flex-direction:column;gap:.25rem}
+
+.tab-bar{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:1.5rem;overflow-x:auto}
+.tab{font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;padding:.65rem 1.2rem;border:none;background:transparent;color:var(--text-muted);cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-2px;transition:all .15s;white-space:nowrap}
+.tab:hover{color:var(--text)}
+.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+
+.card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:1.25rem;margin-bottom:1.25rem;transition:background .3s,border-color .3s}
+.card h2{font-family:'Literata',serif;font-size:1.15rem;font-weight:700;margin-bottom:.75rem;color:var(--text)}
+.card h3{font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:600;margin-bottom:.5rem;color:var(--primary)}
+.card p{font-size:.85rem;color:var(--text-muted);margin-bottom:.5rem}
+
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-family:'JetBrains Mono',monospace;font-size:.78rem}
+thead th{background:var(--table-header-bg);color:var(--table-header-text);padding:.55rem .65rem;text-align:left;font-weight:600;position:sticky;top:0;z-index:2}
+thead th:first-child{border-radius:var(--radius) 0 0 0}
+thead th:last-child{border-radius:0 var(--radius) 0 0}
+tbody td{padding:.45rem .65rem;border-bottom:1px solid var(--border);vertical-align:middle}
+tbody tr:nth-child(even){background:var(--table-stripe)}
+tbody tr:hover{background:var(--highlight)}
+.cell-blow{color:var(--blow-color);font-weight:600}
+.cell-draw{color:var(--draw-color);font-weight:600}
+.cell-bend{color:var(--bend-color);font-size:.72rem}
+.cell-hole{font-weight:700;color:var(--text);text-align:center;width:2.5rem}
+.cell-degree{font-size:.7rem;color:var(--text-muted);margin-left:.25rem}
+
+.legend{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.75rem;color:var(--text-muted);margin-bottom:.75rem}
+.legend-item{display:flex;align-items:center;gap:.35rem}
+.legend-swatch{width:12px;height:12px;border-radius:3px}
+
+.harp-visual{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;margin-bottom:1rem}
+.hole-cell{background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius);padding:.35rem .15rem;text-align:center;font-family:'JetBrains Mono',monospace;font-size:.68rem;line-height:1.35;transition:all .15s;cursor:default}
+.hole-cell:hover{background:var(--highlight);border-color:var(--highlight-border);transform:translateY(-1px);box-shadow:var(--shadow)}
+.hole-num{font-weight:700;font-size:.72rem;color:var(--text-muted);margin-bottom:.2rem}
+.hole-blow{color:var(--blow-color);font-weight:600}
+.hole-draw{color:var(--draw-color);font-weight:600}
+.hole-bend{color:var(--bend-color);font-size:.6rem;line-height:1.2}
+.hole-cell.highlighted{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.hole-cell.highlighted .hole-num,.hole-cell.highlighted .hole-blow,.hole-cell.highlighted .hole-draw,.hole-cell.highlighted .hole-bend{color:var(--bg)}
+
+.info-box{background:var(--highlight);border-left:3px solid var(--highlight-border);border-radius:0 var(--radius) var(--radius) 0;padding:.75rem 1rem;margin-bottom:1rem;font-size:.82rem;color:var(--text)}
+.info-box code{font-family:'JetBrains Mono',monospace;font-size:.76rem;background:var(--surface-strong);padding:.1rem .35rem;border-radius:3px}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+@media(max-width:800px){.two-col{grid-template-columns:1fr}}
+
+.triad-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:.6rem}
+.triad-card{background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius);padding:.65rem .75rem;transition:all .15s;cursor:default}
+.triad-card:hover{border-color:var(--highlight-border);background:var(--highlight)}
+.triad-degree{font-family:'Literata',serif;font-weight:700;font-size:1rem;color:var(--accent);margin-bottom:.15rem}
+.triad-quality{font-size:.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem}
+.triad-notes{font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+.triad-pattern{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-muted)}
+
+/* ─── Harp strip ──────────────────────────────────────────────────────────── */
+.harp-strip{margin-bottom:1.25rem;overflow-x:auto}
+.harp-strip-grid{display:grid;grid-template-columns:auto repeat(10,1fr) auto;gap:0;align-items:center;min-width:500px}
+.hs-label{font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:600;color:var(--text-muted);padding:0 .5rem;text-align:right;white-space:nowrap}
+.hs-label-r{text-align:left;padding:0 .5rem}
+.hs-blow{background:var(--strip-blow-1);color:var(--strip-blow-1-text);font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;text-align:center;padding:.4rem .2rem;border:1px solid color-mix(in srgb,var(--strip-blow-1-text) 15%,transparent);transition:all .15s}
+.hs-blow.hs-oct2{background:var(--strip-blow-2);color:var(--strip-blow-2-text)}
+.hs-blow.hs-oct3{background:var(--strip-blow-3);color:var(--strip-blow-3-text)}
+.hs-hole{background:var(--strip-hole-bg);color:var(--text);font-family:'JetBrains Mono',monospace;font-size:.82rem;font-weight:700;text-align:center;padding:.35rem .2rem;border:1px solid var(--strip-hole-border)}
+.hs-draw{background:var(--strip-draw-1);color:var(--strip-draw-1-text);font-family:'JetBrains Mono',monospace;font-size:.78rem;font-weight:700;text-align:center;padding:.4rem .2rem;border:1px solid color-mix(in srgb,var(--strip-draw-1-text) 15%,transparent);transition:all .15s}
+.hs-draw.hs-oct2{background:var(--strip-draw-2);color:var(--strip-draw-2-text)}
+.hs-draw.hs-oct3{background:var(--strip-draw-3);color:var(--strip-draw-3-text)}
+/* corners */
+.hs-blow:first-of-type{border-radius:var(--radius) 0 0 0}
+.hs-draw:first-of-type{border-radius:0 0 0 var(--radius)}
+.harp-strip-grid > .hs-blow:nth-child(11){border-radius:0 var(--radius) 0 0}
+.harp-strip-grid > .hs-draw:nth-child(23){border-radius:0 0 var(--radius) 0}
+/* key label */
+.hs-key{font-family:'Literata',serif;font-size:1.1rem;font-weight:700;color:var(--text);text-align:center;padding:.3rem .3rem;grid-row:2}
+
+/* ─── Scale tokens ────────────────────────────────────────────────────────── */
+.scale-pos-label{font-family:'Literata',serif;font-size:1.05rem;font-weight:700;color:var(--accent);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1.5px solid var(--border)}
+.scales-2col{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+@media(max-width:750px){.scales-2col{grid-template-columns:1fr}}
+
+.scale-row{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;padding:.5rem .6rem;background:var(--surface-soft);border:1px solid var(--border);border-radius:var(--radius);transition:all .15s}
+.scale-row:hover{border-color:var(--highlight-border);background:var(--highlight)}
+.scale-name{font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;color:var(--text);width:100%;margin-bottom:.15rem}
+.scale-holes{font-family:'JetBrains Mono',monospace;font-size:.82rem;display:flex;flex-wrap:wrap;gap:.25rem;align-items:center}
+
+.sh{padding:.2rem .15rem;border-radius:4px;font-weight:600;white-space:nowrap;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:2.6rem;line-height:1.15;gap:0px}
+.sh-deg{font-size:.55rem;font-weight:700;opacity:.6;letter-spacing:.02em}
+.sh-note{font-size:.74rem;font-weight:700}
+.sh-hole{font-size:.62rem;opacity:.7}
+.sh-blow{background:color-mix(in srgb,var(--blow-color) 12%,transparent);color:var(--blow-color)}
+.sh-draw{background:color-mix(in srgb,var(--draw-color) 12%,transparent);color:var(--draw-color)}
+.sh-bend{background:color-mix(in srgb,var(--bend-color) 12%,transparent);color:var(--bend-color)}
+.sh-special{background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent);font-style:italic}
+
+/* multi-line scales */
+.scale-row-multi .scale-holes+.scale-holes{margin-top:.2rem;padding-top:.2rem;border-top:1px dashed var(--border)}
+
+@media(max-width:700px){
+  .app-shell{padding:1rem}
+  header h1{font-size:1.3rem}
+  .triad-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+  table{font-size:.72rem}
+  .sh{width:2.2rem;padding:.12rem .1rem}
+  .sh-note{font-size:.68rem}
+  .sh-hole{font-size:.58rem}
+}
+</style>
+</head>
+<body>
+<div class="app-shell" id="app"></div>
+
+<script>
+// ═════════════════════════════════════════════════════════════════════════
+// DATA
+// ═════════════════════════════════════════════════════════════════════════
+
+const HARPS = {
+  'Low F': {
+    tonic:'F',label:'Low F',
+    notes:[
+      {h:1,blow:'F',bd:'1',draw:'G',dd:'2',bends:[{n:"-1\u2019",note:'Gb',d:'b2'}]},
+      {h:2,blow:'A',bd:'3',draw:'C',dd:'5',bends:[{n:"-2\u2019",note:'B',d:'b5'},{n:"-2\u2019\u2019",note:'Bb',d:'4'}]},
+      {h:3,blow:'C',bd:'5',draw:'E',dd:'7',bends:[{n:"-3\u2019",note:'Eb',d:'b7'},{n:"-3\u2019\u2019",note:'D',d:'6'},{n:"-3\u2019\u2019\u2019",note:'Db',d:'b6'}]},
+      {h:4,blow:'F',bd:'1',draw:'G',dd:'2',bends:[{n:"-4\u2019",note:'Gb',d:'b2'}]},
+      {h:5,blow:'A',bd:'3',draw:'Bb',dd:'4',bends:[{n:"-5\u2019",note:'Ab',d:'b3'}]},
+      {h:6,blow:'C',bd:'5',draw:'D',dd:'6',bends:[{n:"-6\u2019",note:'Db',d:'b6'}]},
+      {h:7,blow:'F',bd:'1',draw:'E',dd:'7',bends:[{n:"7\u2019",note:'E',d:'7'}]},
+      {h:8,blow:'A',bd:'3',draw:'G',dd:'2',bends:[{n:"8\u2019",note:'Ab',d:'b3'}]},
+      {h:9,blow:'C',bd:'5',draw:'Bb',dd:'4',bends:[{n:"9\u2019",note:'B',d:'b5'}]},
+      {h:10,blow:'F',bd:'1',draw:'D',dd:'6',bends:[{n:"10\u2019",note:'E',d:'7'},{n:"10\u2019\u2019",note:'Eb',d:'b7'}]},
+    ],
+    triads:[
+      {deg:'I',pat:'4 5 6',notes:'F A C',q:'tonic major'},
+      {deg:'ii',pat:'-4 -5 -6',notes:'G Bb D',q:'supertonic minor'},
+      {deg:'iii',pat:'5 6 -7',notes:'A C E',q:'mediant minor'},
+      {deg:'IV',pat:'-5 -6 7',notes:'Bb D F',q:'subdominant major'},
+      {deg:'V',pat:'6 -7 -8',notes:'C E G',q:'dominant major'},
+      {deg:'vi',pat:'-6 7 8',notes:'D F A',q:'submediant minor'},
+      {deg:'vii',pat:'-7 -8 -9',notes:'E G Bb',q:'leading-tone dim'},
+      {deg:'oct',pat:'7 8 9',notes:'F A C',q:'tonic major'},
+    ],
+    pos:{'1st':'F','2nd':'C','3rd':'G'}
+  },
+  'C': {
+    tonic:'C',label:'C',
+    notes:[
+      {h:1,blow:'C',bd:'1',draw:'D',dd:'2',bends:[{n:"-1\u2019",note:'Db',d:'b2'}]},
+      {h:2,blow:'E',bd:'3',draw:'G',dd:'5',bends:[{n:"-2\u2019",note:'Gb',d:'b5'},{n:"-2\u2019\u2019",note:'F',d:'4'}]},
+      {h:3,blow:'G',bd:'5',draw:'B',dd:'7',bends:[{n:"-3\u2019",note:'Bb',d:'b7'},{n:"-3\u2019\u2019",note:'A',d:'6'},{n:"-3\u2019\u2019\u2019",note:'Ab',d:'b6'}]},
+      {h:4,blow:'C',bd:'1',draw:'D',dd:'2',bends:[{n:"-4\u2019",note:'Db',d:'b2'}]},
+      {h:5,blow:'E',bd:'3',draw:'F',dd:'4',bends:[{n:"-5\u2019",note:'Eb',d:'b3'}]},
+      {h:6,blow:'G',bd:'5',draw:'A',dd:'6',bends:[{n:"-6\u2019",note:'Ab',d:'b6'}]},
+      {h:7,blow:'C',bd:'1',draw:'B',dd:'7',bends:[{n:"7\u2019",note:'B',d:'7'}]},
+      {h:8,blow:'E',bd:'3',draw:'D',dd:'2',bends:[{n:"8\u2019",note:'Eb',d:'b3'}]},
+      {h:9,blow:'G',bd:'5',draw:'F',dd:'4',bends:[{n:"9\u2019",note:'Gb',d:'b5'}]},
+      {h:10,blow:'C',bd:'1',draw:'A',dd:'6',bends:[{n:"10\u2019",note:'B',d:'7'},{n:"10\u2019\u2019",note:'Bb',d:'b7'}]},
+    ],
+    triads:[
+      {deg:'I',pat:'4 5 6',notes:'C E G',q:'tonic major'},
+      {deg:'ii',pat:'-4 -5 -6',notes:'D F A',q:'supertonic minor'},
+      {deg:'iii',pat:'5 6 -7',notes:'E G B',q:'mediant minor'},
+      {deg:'IV',pat:'-5 -6 7',notes:'F A C',q:'subdominant major'},
+      {deg:'V',pat:'6 -7 -8',notes:'G B D',q:'dominant major'},
+      {deg:'vi',pat:'-6 7 8',notes:'A C E',q:'submediant minor'},
+      {deg:'vii',pat:'-7 -8 -9',notes:'B D F',q:'leading-tone dim'},
+      {deg:'oct',pat:'7 8 9',notes:'C E G',q:'tonic major'},
+    ],
+    pos:{'1st':'C','2nd':'G','3rd':'D'}
+  },
+  'D': {
+    tonic:'D',label:'D',
+    notes:[
+      {h:1,blow:'D',bd:'1',draw:'E',dd:'2',bends:[{n:"-1\u2019",note:'Eb',d:'b2'}]},
+      {h:2,blow:'F#',bd:'3',draw:'A',dd:'5',bends:[{n:"-2\u2019",note:'Ab',d:'b5'},{n:"-2\u2019\u2019",note:'G',d:'4'}]},
+      {h:3,blow:'A',bd:'5',draw:'C#',dd:'7',bends:[{n:"-3\u2019",note:'C',d:'b7'},{n:"-3\u2019\u2019",note:'B',d:'6'},{n:"-3\u2019\u2019\u2019",note:'Bb',d:'b6'}]},
+      {h:4,blow:'D',bd:'1',draw:'E',dd:'2',bends:[{n:"-4\u2019",note:'Eb',d:'b2'}]},
+      {h:5,blow:'F#',bd:'3',draw:'G',dd:'4',bends:[{n:"-5\u2019",note:'F',d:'b3'}]},
+      {h:6,blow:'A',bd:'5',draw:'B',dd:'6',bends:[{n:"-6\u2019",note:'Bb',d:'b6'}]},
+      {h:7,blow:'D',bd:'1',draw:'C#',dd:'7',bends:[{n:"7\u2019",note:'C#',d:'7'}]},
+      {h:8,blow:'F#',bd:'3',draw:'E',dd:'2',bends:[{n:"8\u2019",note:'F',d:'b3'}]},
+      {h:9,blow:'A',bd:'5',draw:'G',dd:'4',bends:[{n:"9\u2019",note:'Ab',d:'b5'}]},
+      {h:10,blow:'D',bd:'1',draw:'B',dd:'6',bends:[{n:"10\u2019",note:'C#',d:'7'},{n:"10\u2019\u2019",note:'C',d:'b7'}]},
+    ],
+    triads:[
+      {deg:'I',pat:'4 5 6',notes:'D F# A',q:'tonic major'},
+      {deg:'ii',pat:'-4 -5 -6',notes:'E G B',q:'supertonic minor'},
+      {deg:'iii',pat:'5 6 -7',notes:'F# A C#',q:'mediant minor'},
+      {deg:'IV',pat:'-5 -6 7',notes:'G B D',q:'subdominant major'},
+      {deg:'V',pat:'6 -7 -8',notes:'A C# E',q:'dominant major'},
+      {deg:'vi',pat:'-6 7 8',notes:'B D F#',q:'submediant minor'},
+      {deg:'vii',pat:'-7 -8 -9',notes:'C# E G',q:'leading-tone dim'},
+      {deg:'oct',pat:'7 8 9',notes:'D F# A',q:'tonic major'},
+    ],
+    pos:{'1st':'D','2nd':'A','3rd':'E'}
+  },
+  'G': {
+    tonic:'G',label:'G',
+    notes:[
+      {h:1,blow:'G',bd:'1',draw:'A',dd:'2',bends:[{n:"-1\u2019",note:'Ab',d:'b2'}]},
+      {h:2,blow:'B',bd:'3',draw:'D',dd:'5',bends:[{n:"-2\u2019",note:'Db',d:'b5'},{n:"-2\u2019\u2019",note:'C',d:'4'}]},
+      {h:3,blow:'D',bd:'5',draw:'F#',dd:'7',bends:[{n:"-3\u2019",note:'F',d:'b7'},{n:"-3\u2019\u2019",note:'E',d:'6'},{n:"-3\u2019\u2019\u2019",note:'Eb',d:'b6'}]},
+      {h:4,blow:'G',bd:'1',draw:'A',dd:'2',bends:[{n:"-4\u2019",note:'Ab',d:'b2'}]},
+      {h:5,blow:'B',bd:'3',draw:'C',dd:'4',bends:[{n:"-5\u2019",note:'Bb',d:'b3'}]},
+      {h:6,blow:'D',bd:'5',draw:'E',dd:'6',bends:[{n:"-6\u2019",note:'Eb',d:'b6'}]},
+      {h:7,blow:'G',bd:'1',draw:'F#',dd:'7',bends:[{n:"7\u2019",note:'F#',d:'7'}]},
+      {h:8,blow:'B',bd:'3',draw:'A',dd:'2',bends:[{n:"8\u2019",note:'Bb',d:'b3'}]},
+      {h:9,blow:'D',bd:'5',draw:'C',dd:'4',bends:[{n:"9\u2019",note:'Db',d:'b5'}]},
+      {h:10,blow:'G',bd:'1',draw:'E',dd:'6',bends:[{n:"10\u2019",note:'F#',d:'7'},{n:"10\u2019\u2019",note:'F',d:'b7'}]},
+    ],
+    triads:[
+      {deg:'I',pat:'4 5 6',notes:'G B D',q:'tonic major'},
+      {deg:'ii',pat:'-4 -5 -6',notes:'A C E',q:'supertonic minor'},
+      {deg:'iii',pat:'5 6 -7',notes:'B D F#',q:'mediant minor'},
+      {deg:'IV',pat:'-5 -6 7',notes:'C E G',q:'subdominant major'},
+      {deg:'V',pat:'6 -7 -8',notes:'D F# A',q:'dominant major'},
+      {deg:'vi',pat:'-6 7 8',notes:'E G B',q:'submediant minor'},
+      {deg:'vii',pat:'-7 -8 -9',notes:'F# A C',q:'leading-tone dim'},
+      {deg:'oct',pat:'7 8 9',notes:'G B D',q:'tonic major'},
+    ],
+    pos:{'1st':'G','2nd':'D','3rd':'A'}
+  },
+  'A': {
+    tonic:'A',label:'A',
+    notes:[
+      {h:1,blow:'A',bd:'1',draw:'B',dd:'2',bends:[{n:"-1\u2019",note:'Bb',d:'b2'}]},
+      {h:2,blow:'C#',bd:'3',draw:'E',dd:'5',bends:[{n:"-2\u2019",note:'D#',d:'b5'},{n:"-2\u2019\u2019",note:'D',d:'4'}]},
+      {h:3,blow:'E',bd:'5',draw:'G#',dd:'7',bends:[{n:"-3\u2019",note:'G',d:'b7'},{n:"-3\u2019\u2019",note:'F#',d:'6'},{n:"-3\u2019\u2019\u2019",note:'F',d:'b6'}]},
+      {h:4,blow:'A',bd:'1',draw:'B',dd:'2',bends:[{n:"-4\u2019",note:'Bb',d:'b2'}]},
+      {h:5,blow:'C#',bd:'3',draw:'D',dd:'4',bends:[{n:"-5\u2019",note:'C',d:'b3'}]},
+      {h:6,blow:'E',bd:'5',draw:'F#',dd:'6',bends:[{n:"-6\u2019",note:'F',d:'b6'}]},
+      {h:7,blow:'A',bd:'1',draw:'G#',dd:'7',bends:[{n:"7\u2019",note:'G#',d:'7'}]},
+      {h:8,blow:'C#',bd:'3',draw:'B',dd:'2',bends:[{n:"8\u2019",note:'C',d:'b3'}]},
+      {h:9,blow:'E',bd:'5',draw:'D',dd:'4',bends:[{n:"9\u2019",note:'D#',d:'b5'}]},
+      {h:10,blow:'A',bd:'1',draw:'F#',dd:'6',bends:[{n:"10\u2019",note:'G#',d:'7'},{n:"10\u2019\u2019",note:'G',d:'b7'}]},
+    ],
+    triads:[
+      {deg:'I',pat:'4 5 6',notes:'A C# E',q:'tonic major'},
+      {deg:'ii',pat:'-4 -5 -6',notes:'B D F#',q:'supertonic minor'},
+      {deg:'iii',pat:'5 6 -7',notes:'C# E G#',q:'mediant minor'},
+      {deg:'IV',pat:'-5 -6 7',notes:'D F# A',q:'subdominant major'},
+      {deg:'V',pat:'6 -7 -8',notes:'E G# B',q:'dominant major'},
+      {deg:'vi',pat:'-6 7 8',notes:'F# A C#',q:'submediant minor'},
+      {deg:'vii',pat:'-7 -8 -9',notes:'G# B D',q:'leading-tone dim'},
+      {deg:'oct',pat:'7 8 9',notes:'A C# E',q:'tonic major'},
+    ],
+    pos:{'1st':'A','2nd':'E','3rd':'B'}
+  }
+};
+
+const UDEG = [
+  {h:1,b:'1',d:'2',bend:"-1\u2019 = b2"},
+  {h:2,b:'3',d:'5',bend:"-2\u2019 = b5; -2\u2019\u2019 = 4"},
+  {h:3,b:'5',d:'7',bend:"-3\u2019 = b7; -3\u2019\u2019 = 6; -3\u2019\u2019\u2019 = b6"},
+  {h:4,b:'1',d:'2',bend:"-4\u2019 = b2"},
+  {h:5,b:'3',d:'4',bend:"-5\u2019 = b3"},
+  {h:6,b:'5',d:'6',bend:"-6\u2019 = b6"},
+  {h:7,b:'1',d:'7',bend:"7\u2019 = 7"},
+  {h:8,b:'3',d:'2',bend:"8\u2019 = b3"},
+  {h:9,b:'5',d:'4',bend:"9\u2019 = b5"},
+  {h:10,b:'1',d:'6',bend:"10\u2019 = 7; 10\u2019\u2019 = b7"},
+];
+
+const SCALES = {
+  '1st': [
+    {name:'Major pentatonic',    holes:[['4','-4','5','6','-6','7']]},
+    {name:'Full major scale',    holes:[['4','-4','5','-5','6','-6','-7','7']]},
+  ],
+  '2nd': [
+    {name:'Major pentatonic',    holes:[['-2',"-3\u2019\u2019",'-3','-4','5','6']]},
+    {name:'Full major scale',    holes:[['-2',"-3\u2019\u2019",'-3','4','-4','5','5*','6']]},
+    {name:'Minor pentatonic',    holes:[['-2',"-3\u2019",'4','-4','-5','6']]},
+    {name:'Blues scale',         holes:[['-2',"-3\u2019",'4',"-4\u2019",'-4','-5','6']]},
+    {name:'Mixolydian mode',     holes:[['-2',"-3\u2019\u2019",'-3','4','-4','5','-5','6'],['6','-6','-7','7','-8','8','-9','9']]},
+  ],
+  '3rd': [
+    {name:'Major pentatonic',    holes:[['-1','2',"-2\u2019","-3\u2019\u2019",'-3','-4']]},
+    {name:'Full major scale',    holes:[['-1','2',"-2\u2019",'-2',"-3\u2019\u2019",'-3',"-4\u2019",'-4']]},
+    {name:'Minor pentatonic',    holes:[['-1',"-2\u2019\u2019",'-2',"-3\u2019\u2019",'4','-4']]},
+    {name:'Blues scale',         holes:[['-1',"-2\u2019\u2019",'-2',"-3\u2019\u2019\u2019","-3\u2019\u2019",'4','-4'],['-4','-5','6',"-6\u2019",'-6','7','-8']]},
+    {name:'Natural minor scale', holes:[['-1','2',"-2\u2019\u2019",'-2',"-3\u2019\u2019","-3\u2019",'4','-4']]},
+    {name:'Dorian mode',         holes:[['-1','2',"-2\u2019\u2019",'-2',"-3\u2019\u2019",'-3','4','-4'],['-4','5','-5','6','-6','-7','7','-8']]},
+  ],
+};
+
+const HARP_KEYS = ['Low F','C','D','G','A'];
+const THEMES = [{id:'energikalkyl',l:'Energikalkyl'},{id:'blueprint',l:'Blueprint'},{id:'midnatt',l:'Midnatt'},{id:'grafit',l:'Grafit'},{id:'konstruktivist',l:'Konstruktivist'}];
+const TABS = ['Note Map','Degree Map','Triads','Positions','Scales'];
+
+let S = {theme:'energikalkyl',harp:'C',tab:'Note Map',hl:[]};
+function set(u){Object.assign(S,u);render();}
+
+// ═════════════════════════════════════════════════════════════════════════
+// NOTE / DEGREE RESOLVER
+// ═════════════════════════════════════════════════════════════════════════
+
+const SEMI = {'C':0,'C#':1,'Db':1,'D':2,'D#':3,'Eb':3,'E':4,'F':5,'F#':6,'Gb':6,'G':7,'G#':8,'Ab':8,'A':9,'A#':10,'Bb':10,'B':11};
+const CHROM = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
+const DEG_NAMES = ['1','b2','2','b3','3','4','b5','5','b6','6','b7','7'];
+
+function halfUp(note){
+  const flat={'Db':'C#','Eb':'D#','Gb':'F#','Ab':'G#','Bb':'A#'};
+  const n=flat[note]||note;
+  const i=CHROM.indexOf(n);
+  return i===-1?'?':CHROM[(i+1)%12];
+}
+
+function getDeg(tonic, note){
+  const t=SEMI[tonic], n=SEMI[note];
+  if(t===undefined||n===undefined) return '?';
+  return DEG_NAMES[((n-t)%12+12)%12];
+}
+
+function classify(tok) {
+  if(tok.includes('*')) return 'special';
+  if(/[\u2019']+/.test(tok)) return 'bend';
+  if(tok.startsWith('-')) return 'draw';
+  return 'blow';
+}
+
+function resolveNote(h, tok) {
+  if(tok.includes('*')){
+    const num=parseInt(tok);
+    const hole=h.notes.find(n=>n.h===num);
+    return hole?halfUp(hole.draw):'?';
+  }
+  const isDraw=tok.startsWith('-');
+  const stripped=isDraw?tok.slice(1):tok;
+  const primeMatch=stripped.match(/[\u2019']+$/);
+  const primeCount=primeMatch?primeMatch[0].length:0;
+  const num=parseInt(stripped);
+  const hole=h.notes.find(n=>n.h===num);
+  if(!hole) return '?';
+  if(primeCount===0) return isDraw?hole.draw:hole.blow;
+  if(isDraw){
+    const idx=primeCount-1;
+    return hole.bends[idx]?hole.bends[idx].note:'?';
+  } else {
+    let count=0;
+    for(const b of hole.bends){
+      if(!b.n.startsWith('-')){count++;if(count===primeCount) return b.note;}
+    }
+    return '?';
+  }
+}
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function renderTokens(arr, h, posTonic){
+  return arr.map(t=>{
+    const c=classify(t);
+    const cls=c==='blow'?'sh-blow':c==='draw'?'sh-draw':c==='bend'?'sh-bend':'sh-special';
+    const note=h?resolveNote(h,t):'';
+    const deg=(posTonic&&note&&note!=='?')?getDeg(posTonic,note):'';
+    return `<span class="sh ${cls}"><span class="sh-deg">${esc(deg)}</span><span class="sh-note">${esc(note)}</span><span class="sh-hole">${esc(t)}</span></span>`;
+  }).join('');
+}
+
+// ═════════════════════════════════════════════════════════════════════════
+// HARP STRIP RENDERER
+// ═════════════════════════════════════════════════════════════════════════
+
+function renderHarpStrip(h){
+  // Three rows: blow | hole | draw — with octave coloring
+  // Oct1: holes 1-3, Oct2: 4-6, Oct3: 7-10
+  function octClass(hole){
+    if(hole<=3) return '';
+    if(hole<=6) return ' hs-oct2';
+    return ' hs-oct3';
+  }
+
+  let blowCells='', holeCells='', drawCells='';
+  for(const n of h.notes){
+    const oc=octClass(n.h);
+    blowCells+=`<div class="hs-blow${oc}">${n.blow}</div>`;
+    holeCells+=`<div class="hs-hole">${n.h}</div>`;
+    drawCells+=`<div class="hs-draw${oc}">${n.draw}</div>`;
+  }
+
+  return `<div class="harp-strip"><div class="harp-strip-grid">
+    <div class="hs-label"></div>${blowCells}<div class="hs-label-r" style="font-size:.7rem">Blow</div>
+    <div class="hs-key">${h.tonic}</div>${holeCells}<div class="hs-label-r" style="font-size:.7rem">Hole</div>
+    <div class="hs-label"></div>${drawCells}<div class="hs-label-r" style="font-size:.7rem">Draw</div>
+  </div></div>`;
+}
+
+// ═════════════════════════════════════════════════════════════════════════
+// RENDER
+// ═════════════════════════════════════════════════════════════════════════
+
+function render(){
+  document.documentElement.setAttribute('data-theme',S.theme);
+  document.getElementById('app').innerHTML=renderHeader()+renderTabs()+renderContent();
+  bind();
+}
+
+function renderHeader(){
+  return `<header><div>
+    <h1>Harmonica <span>Reference</span></h1>
+    <p style="font-size:.78rem;color:var(--text-muted);margin-top:.2rem">10-hole Richter \u00b7 Positions 1\u20133 \u00b7 Standard bends</p>
+  </div><div class="controls">
+    <div class="chip-section"><div class="chip-group-label">Harp</div>
+      <div class="chip-group">${HARP_KEYS.map(k=>`<button class="chip${S.harp===k?' active':''}" data-harp="${k}">${k}</button>`).join('')}</div>
+    </div>
+    <div class="chip-section"><div class="chip-group-label">Theme</div>
+      <div class="chip-group">${THEMES.map(t=>`<button class="chip${S.theme===t.id?' active':''}" data-tp="${t.id}">${t.l}</button>`).join('')}</div>
+    </div>
+  </div></header>`;
+}
+
+function renderTabs(){
+  return `<div class="tab-bar">${TABS.map(t=>`<button class="tab${S.tab===t?' active':''}" data-tab="${t}">${t}</button>`).join('')}</div>`;
+}
+
+function renderContent(){
+  const h=HARPS[S.harp];
+  switch(S.tab){
+    case 'Note Map': return noteMap(h);
+    case 'Degree Map': return degMap();
+    case 'Triads': return triads(h);
+    case 'Positions': return positions(h);
+    case 'Scales': return scales(h);
+  }
+}
+
+// ─── Note Map ────────────────────────────────────────────────────────
+
+function noteMap(h){
+  return `
+  <div class="card"><h2>${h.label} Harp \u2014 Key of ${h.tonic}</h2>
+    <p>Blow, draw, and available bends for each hole.</p></div>
+  <div class="card"><h3>Harp Layout</h3>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--blow-color)"></div> Blow</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--draw-color)"></div> Draw</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--bend-color)"></div> Bend</div>
+    </div>
+    <div class="harp-visual">${h.notes.map(n=>`
+      <div class="hole-cell${S.hl.includes(n.h)?' highlighted':''}">
+        <div class="hole-num">${n.h}</div>
+        <div class="hole-blow">${n.blow}<span class="cell-degree">(${n.bd})</span></div>
+        <div class="hole-draw">${n.draw}<span class="cell-degree">(${n.dd})</span></div>
+        ${n.bends.map(b=>`<div class="hole-bend">${b.n} ${b.note}</div>`).join('')}
+      </div>`).join('')}
+    </div></div>
+  <div class="card"><h3>Full Note Table</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Hole</th><th>Blow</th><th>Draw</th><th>Bend(s)</th></tr></thead>
+      <tbody>${h.notes.map(n=>`<tr>
+        <td class="cell-hole">${n.h}</td>
+        <td class="cell-blow">${n.blow} <span class="cell-degree">(${n.bd})</span></td>
+        <td class="cell-draw">${n.draw} <span class="cell-degree">(${n.dd})</span></td>
+        <td class="cell-bend">${n.bends.map(b=>`${b.n} = ${b.note} (${b.d})`).join('; ')}</td>
+      </tr>`).join('')}</tbody>
+    </table></div></div>`;
+}
+
+// ─── Degree Map ──────────────────────────────────────────────────────
+
+function degMap(){
+  return `
+  <div class="card"><h2>Universal Degree Map</h2>
+    <p>Same across all Richter-tuned diatonics. Learn once, apply to every key.</p></div>
+  <div class="card"><h3>Harp Layout \u2014 Degrees</h3>
+    <div class="harp-visual">${UDEG.map(d=>`
+      <div class="hole-cell">
+        <div class="hole-num">${d.h}</div>
+        <div class="hole-blow" style="font-size:.85rem">\u2191${d.b}</div>
+        <div class="hole-draw" style="font-size:.85rem">\u2193${d.d}</div>
+      </div>`).join('')}
+    </div></div>
+  <div class="info-box"><strong>Pattern:</strong> Holes 1\u20133 and 4\u20136 share blow degrees <code>1 3 5</code>.
+    Draws lower octave: <code>2 5 7 2 4 6</code>. Upper octave: <code>7 2 4 6</code>. Blows 7\u201310: <code>1 3 5 1</code>.</div>
+  <div class="card"><h3>Degree Table</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Hole</th><th>Blow\u00b0</th><th>Draw\u00b0</th><th>Bend Function(s)</th></tr></thead>
+      <tbody>${UDEG.map(d=>`<tr>
+        <td class="cell-hole">${d.h}</td>
+        <td class="cell-blow">${d.b}</td>
+        <td class="cell-draw">${d.d}</td>
+        <td class="cell-bend">${d.bend}</td>
+      </tr>`).join('')}</tbody>
+    </table></div></div>`;
+}
+
+// ─── Triads ──────────────────────────────────────────────────────────
+
+function triads(h){
+  return `
+  <div class="card"><h2>Triads \u2014 ${h.label} Harp</h2>
+    <p>Diatonic triads on the ${h.tonic} harp. Same shapes apply to all harps.</p></div>
+  <div class="card"><h3>Triad Cards</h3>
+    <div class="triad-grid">${h.triads.map(t=>{
+      const holes=t.pat.split(' ').map(p=>parseInt(p.replace('-','')));
+      return `<div class="triad-card" data-th="${holes.join(',')}">
+        <div class="triad-degree">${t.deg}</div>
+        <div class="triad-quality">${t.q}</div>
+        <div class="triad-notes">${t.notes}</div>
+        <div class="triad-pattern">${t.pat}</div>
+      </div>`;}).join('')}
+    </div></div>
+  <div class="card"><h3>Universal Triad Shapes</h3>
+    <div class="info-box">Same hole patterns produce the same chord degrees on <em>any</em> Richter harp. Minus = draw.</div>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Degree</th><th>Pattern</th><th>Quality</th><th>Notes (${h.tonic})</th></tr></thead>
+      <tbody>${h.triads.map(t=>`<tr>
+        <td style="font-weight:700;color:var(--accent)">${t.deg}</td>
+        <td class="cell-draw">${t.pat}</td>
+        <td>${t.q}</td>
+        <td class="cell-blow">${t.notes}</td>
+      </tr>`).join('')}</tbody>
+    </table></div></div>`;
+}
+
+// ─── Positions ───────────────────────────────────────────────────────
+
+function positions(h){
+  return `
+  <div class="card"><h2>Positions 1\u20133 \u2014 ${h.label} Harp</h2>
+    <p>Each position shifts the tonal center. 2nd position (cross harp) is the most common alternative to 1st (straight harp).</p></div>
+  <div class="two-col">
+    <div class="card"><h3>Positions for ${h.tonic} Harp</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Position</th><th>Playing Key</th><th>Interval</th></tr></thead>
+        <tbody>
+          <tr><td style="font-weight:700">1st</td><td class="cell-blow">${h.pos['1st']}</td><td class="cell-bend">Unison (straight harp)</td></tr>
+          <tr><td style="font-weight:700">2nd</td><td class="cell-blow">${h.pos['2nd']}</td><td class="cell-bend">Up a perfect 5th (cross harp)</td></tr>
+          <tr><td style="font-weight:700">3rd</td><td class="cell-blow">${h.pos['3rd']}</td><td class="cell-bend">Up a whole step from 2nd</td></tr>
+        </tbody></table></div></div>
+    <div class="card"><h3>Fast Orientation</h3>
+      <div class="info-box"><strong>2nd position</strong> = up a perfect 5th from harp key.<br>
+        <strong>3rd position</strong> = up a whole step from 2nd.</div>
+      <p style="margin-top:.5rem">Memorize: <strong>degree map \u2192 G-harp note map \u2192 bend functions \u2192 triads \u2192 position jumps</strong>.</p>
+    </div></div>
+  <div class="card"><h3>Which Harp for Which Key?</h3>
+    <p>If you need to play in a given key, which of your harps works in which position?</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Target Key</th>${HARP_KEYS.map(k=>`<th>${k}</th>`).join('')}</tr></thead>
+      <tbody>${allKeys().map(key=>`<tr>
+        <td style="font-weight:700">${key}</td>
+        ${HARP_KEYS.map(hk=>{
+          const p=findPos(hk,key);
+          return `<td ${p?'style="color:var(--accent);font-weight:600"':'style="color:var(--text-muted)"'}>${p||'\u2014'}</td>`;
+        }).join('')}</tr>`).join('')}</tbody>
+    </table></div></div>`;
+}
+
+function allKeys(){
+  const k=new Set();
+  HARP_KEYS.forEach(hk=>Object.values(HARPS[hk].pos).forEach(v=>k.add(v)));
+  const o=['C','C#','Db','D','D#','Eb','E','F','F#','Gb','G','G#','Ab','A','A#','Bb','B'];
+  return[...k].sort((a,b)=>o.indexOf(a)-o.indexOf(b));
+}
+
+function findPos(hk,tk){
+  for(const[p,k]of Object.entries(HARPS[hk].pos)){if(k===tk)return p;}
+  return null;
+}
+
+// ─── Scales ──────────────────────────────────────────────────────────
+
+function scales(h){
+  const pk={'1st':h.pos['1st'],'2nd':h.pos['2nd'],'3rd':h.pos['3rd']};
+
+  function renderScaleCard(sc, posTonic){
+    if(sc.holes.length===1){
+      return `<div class="scale-row">
+        <div class="scale-name">${sc.name}</div>
+        <div class="scale-holes">${renderTokens(sc.holes[0],h,posTonic)}</div>
+      </div>`;
+    } else {
+      return `<div class="scale-row scale-row-multi">
+        <div class="scale-name">${sc.name}</div>
+        <div class="scale-holes">${renderTokens(sc.holes[0],h,posTonic)}</div>
+        <div class="scale-holes">${renderTokens(sc.holes[1],h,posTonic)}</div>
+      </div>`;
+    }
+  }
+
+  // Position-specific layouts
+  function render1st(posTonic){
+    const sc = SCALES['1st'];
+    return `<div class="scales-2col">
+      ${renderScaleCard(sc[0],posTonic)}
+      ${renderScaleCard(sc[1],posTonic)}
+    </div>`;
+  }
+
+  function render2nd(posTonic){
+    const sc = SCALES['2nd'];
+    // Mixolydian: two octaves side by side
+    const mix = sc[4];
+    return `<div class="scales-2col">
+      ${renderScaleCard(sc[0],posTonic)}
+      ${renderScaleCard(sc[1],posTonic)}
+      ${renderScaleCard(sc[2],posTonic)}
+      ${renderScaleCard(sc[3],posTonic)}
+    </div>
+    <div class="scales-2col" style="margin-top:.6rem">
+      <div class="scale-row">
+        <div class="scale-name">${mix.name}</div>
+        <div class="scale-holes">${renderTokens(mix.holes[0],h,posTonic)}</div>
+      </div>
+      <div class="scale-row">
+        <div class="scale-name">${mix.name} <span style="font-size:.7rem;color:var(--text-muted);font-weight:400">(upper)</span></div>
+        <div class="scale-holes">${renderTokens(mix.holes[1],h,posTonic)}</div>
+      </div>
+    </div>`;
+  }
+
+  function render3rd(posTonic){
+    const sc = SCALES['3rd'];
+    // Order: Major pent | Full major, Minor pent | Natural minor, Blues | Dorian
+    return `<div class="scales-2col">
+      ${renderScaleCard(sc[0],posTonic)}
+      ${renderScaleCard(sc[1],posTonic)}
+      ${renderScaleCard(sc[2],posTonic)}
+      ${renderScaleCard(sc[4],posTonic)}
+      ${renderScaleCard(sc[3],posTonic)}
+      ${renderScaleCard(sc[5],posTonic)}
+    </div>`;
+  }
+
+  const posRenderers = {'1st':render1st, '2nd':render2nd, '3rd':render3rd};
+
+  return `
+  <div class="card"><h2>Scales \u2014 ${h.label} Harp</h2>
+    <p>Scale patterns by position. Universal across all Richter harps \u2014 the notes change but the shapes stay the same.</p>
+    <div class="legend" style="margin-top:.5rem">
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--blow-color)"></div> Blow</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--draw-color)"></div> Draw</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--bend-color)"></div> Bend</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:var(--accent)"></div> Special</div>
+    </div></div>
+
+  ${['1st','2nd','3rd'].map(pos=>`<div class="card">
+      <div class="scale-pos-label">${pos} Position \u2014 Key of ${pk[pos]}</div>
+      ${renderHarpStrip(h)}
+      ${posRenderers[pos](pk[pos])}
+    </div>`).join('')}
+
+  <div class="card"><h3>Notation Key</h3>
+    <div class="info-box">
+      <code>4</code> = blow hole 4 &nbsp;
+      <code>-4</code> = draw hole 4 &nbsp;
+      <code>-3\u2019</code> = draw bend \u00bd step &nbsp;
+      <code>-3\u2019\u2019</code> = draw bend whole step &nbsp;
+      <code>-3\u2019\u2019\u2019</code> = draw bend 1\u00bd steps &nbsp;
+      <code>5*</code> = overblow hole 5
+    </div></div>`;
+}
+
+// ═════════════════════════════════════════════════════════════════════════
+// EVENTS
+// ═════════════════════════════════════════════════════════════════════════
+
+function bind(){
+  document.querySelectorAll('[data-tp]').forEach(b=>b.addEventListener('click',()=>set({theme:b.dataset.tp})));
+  document.querySelectorAll('[data-harp]').forEach(b=>b.addEventListener('click',()=>set({harp:b.dataset.harp,hl:[]})));
+  document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>set({tab:b.dataset.tab,hl:[]})));
+  document.querySelectorAll('[data-th]').forEach(c=>{
+    c.addEventListener('mouseenter',()=>set({hl:c.dataset.th.split(',').map(Number)}));
+    c.addEventListener('mouseleave',()=>set({hl:[]}));
+  });
+}
+
+render();
+</script>
+</body>
+</html>
