@@ -1,10 +1,10 @@
-# Harmonica Reference
+# Harpline
 
 **[→ Open the live app](https://dimfield-git.github.io/harpline/)**
 
 Interactive reference tool for 10-hole Richter diatonic harmonicas. A single self-contained HTML file — no build step, no dependencies, no server.
 
-Covers positions 1–3 with note maps, scale degrees, triads, position lookups, and scale patterns for five harp keys: **Low F**, **C**, **D**, **G**, and **A**.
+Covers positions 1–3 with note maps, scale degrees, triads, position lookups, and scale patterns for all standard harp keys: **Low F · C · Db · D · Eb · E · F · F# · G · Ab · A · Bb · B**.
 
 ## Features
 
@@ -36,7 +36,7 @@ Five color themes, switchable at any time:
 
 ## Usage
 
-Open `harmonica_reference.html` in any modern browser. That's it.
+Open `index.html` in any modern browser. That's it.
 
 Select a harp key and a theme from the chips in the header. Navigate between views using the tab bar. Everything runs client-side with zero network requests (aside from Google Fonts on first load).
 
@@ -53,7 +53,7 @@ Select a harp key and a theme from the chips in the header. Navigate between vie
 
 ## Technical notes
 
-- Single HTML file, ~700 lines. All CSS, JS, and data inline.
+- Single HTML file. All CSS, JS, and data inline.
 - No framework. Vanilla JS with a simple state → render cycle.
 - Responsive down to mobile widths.
 - Fonts loaded from Google Fonts: JetBrains Mono, Literata, DM Sans.
